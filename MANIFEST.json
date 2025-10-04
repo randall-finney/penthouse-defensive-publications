@@ -1,0 +1,30 @@
+{
+  "label": "OTP MEMORY WORKING CONDITION",
+  "snapshot": "OTP-MEMORY-WORKING-20251004-115625.tar.gz",
+  "sanitized_payload": "payload-sanitized.tar.gz",
+  "sha256_file": "SHA256SUMS.txt",
+  "sha512_file": "SHA512SUMS.txt",
+  "owner_uuid": "44e653b6-178d-4bfc-b003-2c275d0a51a8",
+  "owner_workspace_id": "c1884958-2717-486f-b865-6db90c210de8",
+  "supabase_project": "actzfdrxgnlqoqyziiyg",
+  "created_utc": "2025-10-04T17:12:07Z",
+  "environment": {
+    "host": "staging.alaricthatcherbooks.com",
+    "app_root": "/var/www/chatbot-ui-staging",
+    "pm2_process": "penthouse-staging"
+  },
+  "behavior": {
+    "otp": "working",
+    "supabase_session": "present",
+    "rls": "owner_only",
+    "chat": "loads",
+    "memories": "accessible",
+    "retrieval_headers": ["x-auth-mode: owner", "x-rag-context: true"]
+  },
+  "components": {
+    "middleware": "middleware.ts",
+    "otp_request": "pages/api/auth/request-otp.ts",
+    "otp_verify": "pages/api/auth/verify-otp.ts",
+    "rls_policy": "owner_can_read_own_workspace"
+  }
+}
